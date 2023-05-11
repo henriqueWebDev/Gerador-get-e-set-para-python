@@ -1,0 +1,16 @@
+#Algoritimo gerador
+vz = int(input('Quantos Métodos: '))
+listaMet = []
+for i in range(vz):
+    x = input("Nome {}° método ->".format(i+1))
+    listaMet.append(x)
+
+for x in listaMet:
+    print('\n')
+    print(
+        "    def set{}(self, {}):\n"
+        "        self.__{} = {}\n"
+        "    def get{}(self):\n"
+        "        return self.__{}\n"
+        "    {} = property(get{}, set{})".format(x.capitalize(),x,x,x,x.capitalize(),x,x,x.capitalize(),x.capitalize())
+    )
